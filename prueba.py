@@ -6,7 +6,7 @@ def main():
     st.title("Descargar y mostrar DataFrame de Google Drive en Streamlit")
 
     # URL de descarga del archivo desde Google Drive
-    url = "https://drive.google.com/file/d/1ea3baHPePunw8bWNeAzygsfV9YXYI6Mc/view?usp=drive_link"
+    url = "https://docs.google.com/spreadsheets/d/1-dlznEDbQ_HDRyhDiTK66rLiu1v_qikbxBP6WYGsW-c/edit?usp=drive_link"
 
     try:
         # Descargar el archivo desde Google Drive
