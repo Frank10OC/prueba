@@ -40,7 +40,7 @@ if not os.path.exists('downloads'):
 @st.experimental_memo
 def download_data():
   #https://drive.google.com/uc?id=
-  url = "https://drive.google.com/uc?id=1op-iq0XhBXBQOPlagCPE9TzFsFkkNVjQ"
+  url = "https://drive.google.com/file/d/1ea3baHPePunw8bWNeAzygsfV9YXYI6Mc/view?usp=sharing"
   output = "downloads/data.csv"
   gdown.download(url,output,quiet = False)
   
