@@ -6,13 +6,13 @@ dfa = pd.read_csv("https://raw.githubusercontent.com/Frank10OC/prueba/main/Repor
 st.write(dfa)
 import streamlit as st
 import pandas as pd
-import folium
+import plotly.express as px
 
 def main():
     st.title("Visualizador de Coordenadas en Mapa")
 
     # Cargar el DataFrame
-    df = dfa  # Función para cargar el DataFrame, puedes adaptarla según tus necesidades
+    df = cargar_dataframe()  # Función para cargar el DataFrame, puedes adaptarla según tus necesidades
 
     # Mostrar el DataFrame
     st.subheader("DataFrame")
@@ -22,17 +22,15 @@ def main():
     lat_column = st.selectbox("Columna de latitud", df.columns)
     lon_column = st.selectbox("Columna de longitud", df.columns)
 
-    # Crear el mapa
-    map = folium.Map()
+    # Crear la figura del mapa
+    fig = px.scatter_mapbox(df, lat=lat_column, lon=lon_column, hover_data=df.columns)
 
-    # Agregar marcadores al mapa
-    for index, row in df.iterrows():
-        lat = row[lat_column]
-        lon = row[lon_column]
-        folium.Marker(location=[lat, lon], popup=f"Ubicación {index}").add_to(map)
+    # Configurar el diseño del mapa
+    fig.update_layout(mapbox_style="open-street-map")
+    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
     # Mostrar el mapa
-    folium_static(map)
+    st.plotly_chart(fig)
 
 if __name__ == "__main__":
     main()
