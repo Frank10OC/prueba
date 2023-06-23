@@ -12,7 +12,7 @@ def main():
     st.title("Visualizador de Coordenadas en Mapa")
 
     # Cargar el DataFrame
-    df = cargar_dataframe()  # Función para cargar el DataFrame, puedes adaptarla según tus necesidades
+    df = dfa  # Función para cargar el DataFrame, puedes adaptarla según tus necesidades
 
     # Mostrar el DataFrame
     st.subheader("DataFrame")
