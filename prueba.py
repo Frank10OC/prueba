@@ -19,8 +19,8 @@ def main():
     st.dataframe(df)
 
     # Obtener las columnas de coordenadas
-    lat_column = df.("LATITUD")
-    lon_column = df.("LONGITUD")
+    lat_column = df.["LATITUD"]
+    lon_column = df.["LONGITUD"]
 
     # Crear el mapa
     map = folium.Map()
