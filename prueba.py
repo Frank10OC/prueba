@@ -7,7 +7,7 @@ def main():
     st.title("Buscar y cargar archivo CSV desde una página web en Streamlit")
 
     # URL de la página web donde se encuentra el archivo CSV
-    url = "https://www.datosabiertos.gob.pe/dataset/casos-positivos-por-covid-19-ministerio-de-salud-minsa"
+    url = "https://datosabiertos.senace.gob.pe/home/VistaDatos/carteraproyectos?dataset=ESTUDIOS%20AMBIENTALES%20(DESAPROBADO)&id=3&q=DESAPROBADO#"
 
     try:
         # Realizar la solicitud HTTP a la página
