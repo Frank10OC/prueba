@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import numpy as np
+import matplotlib.pyplot as plt
 
 st.title('Casos Positivos Covid')
 st.header('Total de Casos:')
