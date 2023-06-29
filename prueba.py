@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+import numpy as np
 
 st.title('Casos Positivos Covid')
 st.header('Total de Casos:')
