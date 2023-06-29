@@ -8,6 +8,7 @@ st.header('Total de Casos:')
 url = 'https://drive.google.com/file/d/18Rkz4SouRbyf9Xs9GUBJ0y9ce_csghfy/view?usp=sharing'
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 df = pd.read_csv(path, delimiter=';')
+st.write(df)
 
 # Convertir la columna 'FECHA_RESULTADO' al formato de fecha y hora
 df['FECHA_RESULTADO'] = pd.to_datetime(df['FECHA_RESULTADO'], format='%Y%m%d')
